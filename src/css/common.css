@@ -1,0 +1,58 @@
+/* 样式初始化代码 */
+html,body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dt,dd,p,
+form,table,th,td,button {
+    border: none;
+    font-family: "微软雅黑","宋体", courier, monospace;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    min-width: 1500px;
+    margin: 0 auto;
+    /* box-sizing: border-box; */
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+    /* display: inline-block; */
+}    
+button{
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    color: #FFF;
+    background-color: rgb(93, 26, 218);
+    border-radius: 4px;
+}
+button:hover {
+    background-color: rgb(127, 61, 250);
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?dmxcct');
+    src:  url('../fonts/icomoon.eot?dmxcct#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?dmxcct') format('truetype'),
+      url('../fonts/icomoon.woff?dmxcct') format('woff'),
+      url('../fonts/icomoon.svg?dmxcct#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,234 @@
+
+/* ----------------------------------------1.版心------------------------------------- */
+
+.swrap {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.theTitle {
+    height: 64px;
+    font-size: 42px;
+    color: #FFF;
+    background-color: blueviolet;
+}
+.theTitleSwrap {
+    text-align: center;
+}
+.theTitleSwrap h1 {
+    font-weight: 600;
+}
+/* ----------------------------------------2.导航栏及按钮-----star--------------------------------- */
+#functionNav {
+    position: relative;
+    margin: 4px 0;
+}
+
+.funBtn {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(93, 26, 218);
+    color: #FFF; 
+    cursor: pointer;
+}
+.funBtn:hover {
+        background-color: rgb(127, 61, 250);
+}
+.funBtn:focus {
+    background-color: rgb(38, 8, 92);
+}
+/* 搜索框  star */
+.searchArea,
+#searchText,
+#searchBtn {
+    /* initial-value: initial; */
+    display: inline-block;
+}
+.searchArea{
+    position: absolute;
+    right: 2px;
+}
+#searchText {
+    width: initial;
+}
+
+/* 搜索框  end */
+
+/* ----------------------------------------导航栏及按钮-----end----------------------------------- */
+
+/*  --------------------------------------3.输入信息的表单-------------------------------------------- */
+.inputForm{
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+.logo {
+    border-bottom: 2.2px solid blueviolet;
+}
+.logo span {
+    margin-left: 2.2px;
+    margin-right: 11%;     
+    font-size: 24px;
+    font-weight: bolder;
+    color: blueviolet;
+}
+
+
+/*  ---------------------------------------4.输入对比爱好的表单---------------------------------------- */
+
+.dialog2 {
+    position: absolute;
+}
+.contrastForm{
+    display: none;
+    position: absolute;
+    top: 35%;
+    left:50%;
+    transform: translate(-50%,-14%); 
+    width: 1000px;
+    
+}
+
+.copyText {
+    width: 60%;
+    margin-left: 20%;
+  }
+  #sendBtn,
+  #cancelBtn{
+    border-radius: 3px;
+    padding: 8px 18px;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+   
+  .toCancelBtn {  
+    display: inline-block;
+      width: 100px;
+      height: 40px;
+      color: #FFF; 
+      border-radius: 4px;
+    background: #E91E63;
+    cursor: pointer;
+  
+  }
+  .toCancelBtn:hover {
+    background: #f27ba3;
+  }
+
+
+/* ----------------------------------------5.展示框样式-------star----------------------------------- */
+
+.isDisplay {
+    display:block;
+}
+.sameHobbyDisplay {
+    background-color: rgb(197, 173, 228);
+}
+
+
+.displayTable{
+    height: 600px;
+    margin-top: 10px;
+    overflow: scroll;
+    background-color: rgb(231, 252, 253);
+}
+
+.displayTable table,
+.displayTable tbody,
+.displayTable thead{
+    width: 100%;
+    border:none;
+    margin: none;
+    padding: 0;
+}
+
+.displayTable thead{
+    font-weight: 800;
+    background-color: blueviolet;
+}
+.displayTable thead th{
+    color: rgb(255, 255, 255);
+
+}
+.displayTable tbody tr{
+    background-color: rgb(249, 225, 255);
+}
+.displayTable tbody tr:nth-of-type(odd){
+    background-color: rgb(210, 245, 245);
+}
+.displayTable tbody tr:hover {
+  background-color: rgba(115, 56, 224, 0.473);
+}
+.displayTable tbody tr:hover td{
+    color: #fff;
+}
+
+.modify,
+.delect{
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: rgb(9, 143, 114);
+    color: #fff;
+    cursor: pointer;
+    font-family: 'icomoon';
+
+}
+.delect {
+    background: #f8528a;
+}
+.modify:hover,
+.delect:hover{
+  background: #ffffff;
+  color: rgb(71, 13, 126);
+}
+.modify:active,
+.delect:active{
+    transform: scale(80%);
+}
+.mdBtn {
+    text-align: center;
+}
+.mdBtn span{
+margin: 0 4px;
+}
+
+/* ----------------------------------------展示框样式-------end----------------------------------- */
+
+/* ----------------------------------------====页脚-个人信息====----------------------------------- */
+
+.myInformation{
+    width:100%;
+    height: 188px;
+    padding-top: 6px;
+    color: #fff;
+    background-color: blueviolet;
+    border-top: 10px solid rgb(11, 145, 179);
+
+}
+.myInformation .swrap div{
+    text-align: left;
+}
+
+.myInformation h2 {
+    font-weight: 700;
+    font-size: 32px;
+    margin: 6px 0;
+    color: #fff;
+
+}
+.myInformation ul{
+    display: inline-block;
+    margin: 0 10px; 
+}
+.myInformation ul a{
+    color: rgb(212, 32, 32);
+}

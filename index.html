@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalForm_GLNode</title>
+    <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/foundation/5.5.0/css/foundation.css'>
+    <link rel="stylesheet" href="src/css/common.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="theTitleSwrap">
+            <h1 class="theTitle">简易个人信息登记系统</h1>
+        </div>
+    </header>
+    <main>
+        <div class="swrap containner">
+            <!-------------------------------------------------- 0.按钮区域 ------------------------------------------------->
+            <div id="functionNav">
+                <button id="addBtn" class="add funBtn">增加信息</button>
+                <button id="displayAll" class=" funBtn">展示所有信息</button>
+                <button id="clear" class="funBtn">清除展示信息</button>
+                <button id="contrast" class="funBtn">比较爱好</button>
+                <!-- <button id="accumulate" class="funBtn">统计生日爱好</button> -->
+                <div class="searchArea">
+                    <input type="text" name="" id="searchText">
+                    <button id="search" class="funBtn">搜索</button>
+                </div>
+            </div>
+            <!-------------------------------------------------- 1.展示信息框 ------------------------------------------------->
+            <div class="displayTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>年龄</th>
+                            <th>身份证</th>
+                            <th>生日</th>
+                            <th>爱好</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="displayTbody">
+                        <!-- <tr>
+                            <td>汪东城</td>
+                            <td>18</td>
+                            <td>440563200102025689</td>
+                            <td>20010202</td>
+                            <td>（文学，（古典，（红楼梦）））<br>
+                                （文学，（现代，（金色梦乡）））
+                            </td>
+                            <td class="mdBtn"><span class="modify"></span>|<span class="delect"></span></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!------------------------------------------------- 2.输入表单 -------------------------------------------------->
+        <div class="inputForm">
+            <div class="row">
+                <div class="small-12 small-centered medium-8 columns">
+                    <form class="panel m-panel shadow" id="formSub">
+                        <div class="row collapse">
+                            <div class="small-12 columns logo">
+                                <header class="form-header">
+                                    <h2><span>| 简记</span><small>请输入您的个人信息</small></h2>
+                                </header>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <div id="addMessage" name="message">
+                                    <div class="row">
+                                        <div class="small-4 columns">
+                                            <p class="notice">姓名 </p>
+                                        </div>
+                                        <div class="small-8 columns">
+                                            <div class="form-group-material">
+                                                <!-- <label class="material-label" for="name">Name</label> -->
+                                                <input class="material-field" name="oname" required="required"
+                                                    type="text" placeholder="Name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="small-4 columns">
+                                            <p class="notice">年龄 </p>
+                                        </div>
+                                        <div class="small-8 columns">
+                                            <div class="form-group-material">
+                                                <input class="material-field" name="age" required="required" type="text"
+                                                    placeholder="Age" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="small-4 columns">
+                                            <p class="notice">身份证 </p>
+                                        </div>
+                                        <div class="small-8 columns">
+                                            <div class="form-group-material">
+                                                <input class="material-field" name="idcard" required="required"
+                                                    type="text" placeholder="ID" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="small-4 columns">
+                                            <p class="notice">生日(年月日) </p>
+                                        </div>
+                                        <div class="small-8 columns">
+                                            <div class="form-group-material">
+                                                <input class="material-field" name="birth" required="required"
+                                                    type="text" placeholder="Birthday" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="small-8 columns copyText">
+                                            <div class="form-group-material">
+                                                <input class="material-field " name="copy" placeholder="(请输入身份证复制爱好)"
+                                                    type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="small-4 columns">
+                                            <span id="copyBtn" class="funBtn">Copy</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="small-4 columns">
+                                            <p class="notice">爱好 </p>
+                                        </div>
+                                        <div class="small-8 columns">
+                                            <div class="form-group-material">
+                                                <textarea name="hobbies" id="hobbyText" cols="30" rows="6"
+                                                    required='required'
+                                                    placeholder="请按“（大类，（项目，（爱好）））”方式输入，以回车键结尾"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="small-12 small-push-4 columns">
+                                        <button id="subBtn" type="submit">Submit !</button>
+                                        <span id="cancelBtn" class="toCancelBtn">Cancel</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------------- 3.比较表单 ------------------------------------------------------------->
+        <div class="contrastForm">
+            <div class="small-12 small-centered medium-8 columns ">
+                <div class="panel m-panel shadow">
+                    <div class="row collapse">
+                        <div class="small-12 columns contrastFormArea">
+                            <div class="small-12 columns logo">
+                                <header class="form-header">
+                                    <h2><span>| 简记</span><small>请输入需要对比爱好的人的身份证号码</small></h2>
+                                </header>
+                            </div>
+
+                            <div class="row">
+                                <div class="small-4 columns">
+                                    <p class="notice">身份证号码 </p>
+                                </div>
+                                <div class="small-8 columns">
+                                    <div class="form-group-material">
+                                        <input class="material-field contrastText" type="text" placeholder="ID" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="small-4 columns">
+                                    <p class="notice">身份证号码 </p>
+                                </div>
+                                <div class="small-8 columns">
+                                    <div class="form-group-material">
+                                        <input class="material-field contrastText" type="text" placeholder="ID" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="btnArea">
+                            <button id="addContrast">ADD</button>
+                            <button id="contrastSub">Submmit !</button>
+                            <button id="contrastCancel" class="toCancelBtn">Cancel</button>
+                        </div>
+                        <!-- <header class="form-header">
+                                <h2>他们相同的爱好有：</h2>
+                            </header>
+                            <div class="row">
+                                <table>
+                                    <tbody class="sameHobbyDisplay">
+                                    
+                                    </tbody>
+                                </table>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-------------------------------------------------- 页脚-个人信息  ------------------------------------------------------------->
+    <footer>
+        <div class="myInformation">
+            <div class="swrap">
+                <div>
+                    <h2>数据结构课程设计</h2>
+                    <ul>
+                        <li>学校：<a href="https://www.gdut.edu.cn/" target="blank">广东工业大学</a></li>
+                        <li>
+                            课程名称：数据结构
+                        </li>
+                        <li>
+                            题目名称：简易个人信息登记系统
+                        </li>
+                        <li>
+                            指导教师：林志毅
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <li>学生学院：计算机学院</li>
+                        <li>专业班级：20级软件工程（3）班</li>
+                        <li>学号：3120005270</li>
+                        <li>学生姓名：朱文远</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="src/js/data.js"></script>
+<script src="src/js/jQuery_M.js"></script>
+<script src="src/js/GLNode.js"></script>
+<script src="src/js/LinkList.js"></script>
+<script src="src/js/interactivePart.js"></script>
+<script src="src/js/main.js"></script>
+<!-- <script src="src/js/accSameItem.js"></script> -->
+
+</html>
